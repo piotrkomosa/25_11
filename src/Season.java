@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public enum Season {
 
     SPRING("Wiosna", new String[]{"marzec", "kwiecień", "maj"}),
@@ -17,15 +19,13 @@ public enum Season {
         return translation;
     }
 
-    public void setTranslation(String translation) {
-        this.translation = translation;
-    }
-
     public String[] getMonth() {
         return month;
     }
 
-    public void setMonth(String[] month) {
-        this.month = month;
+
+    @Override
+    public String toString() {
+        return translation + ":" + getMonth();
     }
 }
